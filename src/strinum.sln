@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Strinum", "Strinum\Strinum.csproj", "{332FD5F2-ABCE-4BD3-A3E6-2203968641AA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Strinum.Tests", "Strinum.Tests\Strinum.Tests.csproj", "{FCCE9922-344F-4A02-A578-CCBE6E7A6E26}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Strinum.Benchmarks", "Strinum.Benchmarks\Strinum.Benchmarks.csproj", "{76028794-6613-435D-B94F-ABDAEA416382}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{332FD5F2-ABCE-4BD3-A3E6-2203968641AA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{332FD5F2-ABCE-4BD3-A3E6-2203968641AA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{332FD5F2-ABCE-4BD3-A3E6-2203968641AA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{332FD5F2-ABCE-4BD3-A3E6-2203968641AA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FCCE9922-344F-4A02-A578-CCBE6E7A6E26}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FCCE9922-344F-4A02-A578-CCBE6E7A6E26}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FCCE9922-344F-4A02-A578-CCBE6E7A6E26}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FCCE9922-344F-4A02-A578-CCBE6E7A6E26}.Release|Any CPU.Build.0 = Release|Any CPU
+		{76028794-6613-435D-B94F-ABDAEA416382}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{76028794-6613-435D-B94F-ABDAEA416382}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{76028794-6613-435D-B94F-ABDAEA416382}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{76028794-6613-435D-B94F-ABDAEA416382}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
