@@ -25,8 +25,8 @@ public class Executor
     }
 
     [Benchmark]
-    public void EnumGetDescription()
+    public void EnumStringify()
     {
-        _ = Sample.GetDescription();
+        _ = Sample.Stringify();
     }
 }

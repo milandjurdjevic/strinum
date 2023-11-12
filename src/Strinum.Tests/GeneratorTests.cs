@@ -13,12 +13,10 @@ public class GeneratorTests
     {
         SyntaxTree syntaxTree = CSharpSyntaxTree.ParseText(
             """
-            using System.ComponentModel;
-
             public enum GlobalEnumType
             {
-                [Description("One global")] One,
-                [Description("Two global")] Two,
+                One,
+                Two,
                 Three
             }
 
@@ -26,32 +24,32 @@ public class GeneratorTests
             {
                 public enum EnumType
                 {
-                    [Description("One")] One,
-                    [Description("Two")] Two,
+                    One,
+                    Two,
                     Three,
-                    [Description] Four
+                    Four
                 }
             
                 public class WrapperClass
                 {
                     public enum NestedEnumType
                     {
-                        [Description("One nested")] One,
-                        [Description("Two nested")] Two,
+                        One,
+                        Two,
                         Three
                     }
                     
                     private enum PrivateNestedEnumType
                     {
-                        [Description("One private nested")] One,
-                        [Description("Two private nested")] Two,
+                        One,
+                        Two,
                         Three
                     }
                     
                     internal enum InternalNestedEnumType
                     {
-                        [Description("One internal nested")] One,
-                        [Description("Two internal nested")] Two,
+                        One,
+                        Two,
                         Three
                     }
                 }
