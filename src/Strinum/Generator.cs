@@ -28,7 +28,7 @@ public class Generator : IIncrementalGenerator
         writer.WriteLine("public static class Extensions");
         writer.WriteLine('{');
         writer.Indent++;
-        foreach (ITypeSymbol? symbol in symbols.OfType<ITypeSymbol>())
+        foreach (ITypeSymbol symbol in symbols.OfType<ITypeSymbol>())
         {
             writer.WriteLine($"public static string Stringify(this global::{symbol.ToDisplayString()} enumeration)");
             writer.WriteLine('{');
