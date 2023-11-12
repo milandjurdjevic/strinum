@@ -1,22 +1,20 @@
 ### Usage
 
-The source generator will scan the source code for enum members marked
-with `System.ComponentModel.DescriptionAttribute`. Attribute argument value will retrieved from `GetDescription()`
-extension method.
+The source generator will scan the source code for enum types and generate a `Stringify()` extension method that will return the name of the enum member as a string.
 
 ### Example
 
 ```csharp
 public enum Number
 {
-    [Description("Number 1")] One,
-    [Description("Number 2")] Two,
-    [Description("Number 3")] Three
+    One,
+    Two,
+    Three
 }
 
- Console.WriteLine(Number.One.GetDescription());
- Console.WriteLine(Number.Two.GetDescription());
- Console.WriteLine(Number.Three.GetDescription());
+ Console.WriteLine(Number.One.Stringify());
+ Console.WriteLine(Number.Two.Stringify());
+ Console.WriteLine(Number.Three.Stringify());
 
 // Output:
 // Number 1
