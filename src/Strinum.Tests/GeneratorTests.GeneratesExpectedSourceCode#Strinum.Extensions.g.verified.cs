@@ -25,6 +25,16 @@ namespace Strinum
                 _ => global::System.String.Empty
             };
         }
+        public static string Stringify(this global::EnumNamespace.EnumTypeWithAttribute enumeration)
+        {
+            return enumeration switch
+            {
+                global::EnumNamespace.EnumTypeWithAttribute.One => "NumberOne",
+                global::EnumNamespace.EnumTypeWithAttribute.Two => "NumberTwo",
+                global::EnumNamespace.EnumTypeWithAttribute.Three => "NumberThree",
+                _ => global::System.String.Empty
+            };
+        }
         public static string Stringify(this global::EnumNamespace.WrapperClass.NestedEnumType enumeration)
         {
             return enumeration switch

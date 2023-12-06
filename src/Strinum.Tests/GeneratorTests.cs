@@ -1,4 +1,4 @@
-using System.ComponentModel;
+using System.ComponentModel.DataAnnotations;
 
 using Microsoft.CodeAnalysis;
 using Microsoft.CodeAnalysis.CSharp;
@@ -11,15 +11,17 @@ public class GeneratorTests
     [Fact]
     public Task GeneratesExpectedSourceCode()
     {
+        // lang=csharp
         SyntaxTree syntaxTree = CSharpSyntaxTree.ParseText(
             """
+            using Strinum;
+
             public enum GlobalEnumType
             {
                 One,
                 Two,
                 Three
             }
-
             namespace EnumNamespace
             {
                 public enum EnumType
@@ -28,6 +30,13 @@ public class GeneratorTests
                     Two,
                     Three,
                     Four
+                }
+                
+                public enum EnumTypeWithAttribute
+                {
+                    [Stringify("NumberOne")] One,
+                    [Stringify("NumberTwo")] Two,
+                    [Stringify("NumberThree")] Three
                 }
             
                 public class WrapperClass
@@ -56,18 +65,16 @@ public class GeneratorTests
             }
             """);
 
-
         CSharpCompilation compilation = CSharpCompilation.Create(nameof(GeneratorTests),
             new[] { syntaxTree },
             new[]
             {
                 MetadataReference.CreateFromFile(typeof(object).Assembly.Location),
-                MetadataReference.CreateFromFile(typeof(DescriptionAttribute).Assembly.Location)
-            });
-
+                MetadataReference.CreateFromFile(typeof(DisplayAttribute).Assembly.Location)
+            }
+        );
         Generator generator = new();
         GeneratorDriver driver = CSharpGeneratorDriver.Create(generator).RunGenerators(compilation);
-
         return Verify(driver);
     }
 }
