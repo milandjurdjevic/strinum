@@ -1,5 +1,3 @@
-# Strinum
-
 Versatile source code tool designed to automate the generation of stringification extension methods for enum types. By intelligently scanning your source code, this generator identifies enum types and creates streamlined methods for converting enum members to human-readable string representations. Improve code readability, simplify debugging, and boost productivity with EnumStringifyGenerator – the essential companion for enum handling in your projects.
 
 ## Usage
