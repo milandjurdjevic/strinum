@@ -5,6 +5,11 @@
 **Strinum** is a lightweight and powerful library that can help you work with enums and strings more efficiently and
 elegantly.
 
+## Features
+- **Automatic Enum Stringification**: The generator intelligently analyzes your source code to identify enum types and creates stringification extension methods for each enum, streamlining the process of converting enum members to strings.
+- **Customizable Output**: Tailor the generated code to match your project's coding standards and conventions. The source generator offers configuration options, allowing you to customize the output to align with your team's preferences.
+- **Increased Productivity**: Save time and reduce the likelihood of errors by automating the creation of enum stringification methods. Focus on building robust features while the EnumStringifyGenerator handles the repetitive task of enum string conversion.
+
 ## Benchmark
 
 | Method        | Sample |      Mean |     Error |    StdDev |   Gen0 | Allocated |
