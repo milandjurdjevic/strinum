@@ -2,7 +2,6 @@
 
 ## Fast and easy conversion between enums and strings [![latest version](https://img.shields.io/nuget/v/strinum)](https://www.nuget.org/packages/strinum)
 
-## About
 Powerful source code generator designed to enhance your development workflow by automating the generation of stringification extension methods for enum types. This "tool" efficiently scans your source code, identifies enum types, and generates extension methods that facilitate the conversion of enum members to their corresponding string representations.
 
 ## Features
