@@ -9,6 +9,58 @@ Powerful source code generator designed to enhance your development workflow by 
 - **Customizable Output**: Tailor the generated code to match your project's coding standards and conventions. The source generator offers configuration options, allowing you to customize the output to align with your team's preferences.
 - **Increased Productivity**: Save time and reduce the likelihood of errors by automating the creation of enum stringification methods. Focus on building robust features while the EnumStringifyGenerator handles the repetitive task of enum string conversion.
 
+## Usage
+
+The `Stringify()` extension method is generated for each enum type in your source code. If you call it on an enum member, it will return the member represented as a string.
+
+```csharp
+public enum Number
+{
+    One,
+    Two,
+    Three
+}
+
+ Console.WriteLine(Number.One.Stringify());
+ Console.WriteLine(Number.Two.Stringify());
+ Console.WriteLine(Number.Three.Stringify());
+
+// Output:
+// One
+// Two
+// Three
+```
+
+### Customizing outputs
+
+Sometimes you want to change the output of a stringified enum value. To do that, you can use `StringifyAttribute` to override the default enum string value.
+
+```csharp
+using Strinum;
+
+public enum Number
+{
+    [Stringify("NumberOne")] One,
+    [Stringify("number_two")] Two,
+    [Stringify("number-three")] Three,
+    [Stringify("numberFour")] Four,
+    [Stringify("Number 5")] Five
+}
+
+Console.WriteLine(Number.One.Stringify());
+Console.WriteLine(Number.Two.Stringify());
+Console.WriteLine(Number.Three.Stringify());
+Console.WriteLine(Number.Four.Stringify());
+Console.WriteLine(Number.Five.Stringify());
+
+// Output:
+// NumberOne
+// number_two
+// number-three
+// numberFour
+// Number 5
+```
+
 ## Benchmark
 
 | Method        | Sample |      Mean |     Error |    StdDev |   Gen0 | Allocated |
