@@ -1,7 +1,6 @@
-# Strinum
+# Strinum [![latest version](https://img.shields.io/nuget/v/strinum)](https://www.nuget.org/packages/strinum)
 
-## Fast and easy conversion between enums and strings [![latest version](https://img.shields.io/nuget/v/strinum)](https://www.nuget.org/packages/strinum)
-
+### Fast and easy enum conversion to strings 
 Powerful source code generator designed to enhance your development workflow by automating the generation of stringification extension methods for enum types. This "tool" efficiently scans your source code, identifies enum types, and generates extension methods that facilitate the conversion of enum members to their corresponding string representations.
 
 ## Features
@@ -11,7 +10,8 @@ Powerful source code generator designed to enhance your development workflow by 
 
 ## Usage
 
-The `Stringify()` extension method is generated for each enum type in your source code. If you call it on an enum member, it will return the member represented as a string.
+The source generator will scan the source code for enum types and generate a `Stringify()` extension method that will
+return the name of the enum member as a string.
 
 ```csharp
 public enum Number
@@ -26,11 +26,10 @@ public enum Number
  Console.WriteLine(Number.Three.Stringify());
 
 // Output:
-// One
-// Two
-// Three
+// Number 1
+// Number 2
+// Number 3
 ```
-
 ### Customizing outputs
 
 Sometimes you want to change the output of a stringified enum value. To do that, you can use `StringifyAttribute` to override the default enum string value.
@@ -83,6 +82,7 @@ Console.WriteLine(Number.Five.Stringify());
 - 1 ns: 1 Nanosecond (0.000000001 sec)
 
 ### Device
+
 - Chip: Apple M1 Pro
 - Memory: 16 GB
 - OS: Sonoma 14.1.2
