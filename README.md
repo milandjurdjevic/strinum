@@ -7,6 +7,9 @@ stringification methods for enum types. This "tool" efficiently scans your sourc
 and generates methods that facilitate the conversion of enum members to their corresponding string
 representations and vice versa.
 
+## Features
+To read more about the library features and usage, please visit the [documentation](src/Strinum/README.md#features) link.
+
 ## Benchmark
 
 | Method              |       Mean |     Error |    StdDev |   Gen0 | Allocated |
