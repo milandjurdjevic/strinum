@@ -20,7 +20,6 @@ To read more about the library features and usage, please visit the [documentati
 
 ### Legends
 
-- Sample: Value of the 'Sample' parameter
 - Mean: Arithmetic mean of all measurements
 - Error: Half of 99.9% confidence interval
 - StdDev: Standard deviation of all measurements
