@@ -22,6 +22,7 @@ public class GeneratorTests
                 Two,
                 Three
             }
+
             namespace EnumNamespace
             {
                 public enum EnumType
@@ -34,9 +35,9 @@ public class GeneratorTests
                 
                 public enum EnumTypeWithAttribute
                 {
-                    [Stringify("NumberOne")] One,
-                    [Stringify("NumberTwo")] Two,
-                    [Stringify("NumberThree")] Three
+                    [StringEnum("NumberOne")] One,
+                    [StringEnum("NumberTwo")] Two,
+                    [StringEnum("NumberThree")] Three
                 }
             
                 public class WrapperClass
@@ -60,6 +61,20 @@ public class GeneratorTests
                         One,
                         Two,
                         Three
+                    }
+                }
+                
+                public class Program
+                {
+                    // Trigger the generator
+                    public static void Main()
+                    {
+                        _ = StringEnum.ToString(GlobalEnumType.One);
+                        _ = StringEnum.ToString(EnumType.One);
+                        _ = StringEnum.ToString(EnumTypeWithAttribute.One);
+                        _ = StringEnum.ToString(WrapperClass.NestedEnumType.One);
+                        _ = StringEnum.ToString(WrapperClass.InternalNestedEnumType.One);
+                        _ = StringEnum.ToString(System.DayOfWeek.Monday);
                     }
                 }
             }

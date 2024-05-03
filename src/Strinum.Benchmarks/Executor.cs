@@ -8,25 +8,21 @@ namespace Strinum.Benchmarks;
 [SuppressMessage("Performance", "CA1822:Mark members as static")]
 public class Executor
 {
-    [Params(Sample.One, Sample.Ten)]
-    [SuppressMessage("ReSharper", "UnusedAutoPropertyAccessor.Global")]
-    public Sample Sample { get; set; }
-
     [Benchmark]
-    public void EnumToString()
+    public void Object_ToString()
     {
-        _ = Sample.ToString();
+        _ = TypeCode.String.ToString();
     }
 
     [Benchmark]
-    public void EnumGetName()
+    public void Enum_GetName()
     {
-        _ = Enum.GetName(Sample);
+        _ = Enum.GetName(TypeCode.String);
     }
 
     [Benchmark]
-    public void EnumStringify()
+    public void StringEnum_ToString()
     {
-        _ = Sample.Stringify();
+        _ = StringEnum.ToString(TypeCode.String);
     }
 }
